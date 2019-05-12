@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Statystyki strony...</h1>
+<div style="max-width: 800px; margin: 50px auto">
+    <canvas id="mychart" widht="1600" height="900"></canvas>
+
+    <script  th:inline="javascript" >
+
+    new Chart(document.getElementById("my-chart"), {
+    type: 'bar',
+    data: {
+    labels: [[${data.Map.keyset())}}]],
+    datasets: [
+    {
+    label: "Population (millions)",
+    backgroundColor: [[${labels}}]],
+    data: [[${data.Map.values())}}]]
+    }
+    ]
+    },
+    options: {
+    legend: { display: false },
+        scales
+    }
+    }
+    });
+    </script>
+
+
+</div>
+
+script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script
+</body>
+</html>
