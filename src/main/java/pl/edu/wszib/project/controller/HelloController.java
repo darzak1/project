@@ -13,8 +13,10 @@ public class HelloController {
     }
 
     @GetMapping ("/powitanie")
-    public String stronaPowitalna(){
+    public String stronaPowitalna() {
+
         return "To jest strona powitalna  " + HelloController.class.getCanonicalName();
+
     }
 
 }
